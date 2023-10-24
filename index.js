@@ -2,6 +2,9 @@ document.querySelector('.generate-btn').addEventListener('click', ()=>{
     let randomNum = document.querySelector('#generateText');
     let num = Math.floor(Math.random()*(9999-1000)+1000);
     randomNum.value = num;
+    i=3;
+    document.querySelector('#i').innerHTML=i;
+    document.querySelector('.submit-btn').disabled = false;
     // console.log(num);
 })
 
@@ -42,6 +45,7 @@ document.querySelector('.submit-btn').addEventListener('click',(e)=>{
             document.querySelector('#matched').style.display='block';
             document.querySelector('#notMatched').style.display='none';
             i=3;
+            document.querySelector('#i').innerHTML=i;
         }
         else{
             document.querySelector('#notMatched').style.display='block';
